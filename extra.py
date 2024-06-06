@@ -404,7 +404,22 @@ diccionario = {clave1: { clave1_a: 1, clave2_b: 2}, clave2: { clave2_a: 3, clave
 para acceder a valores:
 
      dict[clave1] esto devuelve  { clave1_a: 1, clave2_b: 2}
-
      dict[clave1][clave1_a] esto devuelve 1
 
 """
+
+def calcular_promedio(c: Cola[int]):
+     return c
+
+#pruebo mis casos y despues borro
+
+ejemplo = Cola()
+ejemplo.put(1)
+
+ejemplo2 = Cola()
+ejemplo2.put(34567891)
+ejemplo2.put(3)
+
+a = calcular_promedio(ejemplo2).queue #devuelve lo que sea
+print(calcular_promedio(ejemplo).queue, "miramos")
+print(a)
