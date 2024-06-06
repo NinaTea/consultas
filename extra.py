@@ -368,7 +368,7 @@ navegar_atras(historiales, "Usuario1")
 
 def listar_palabras(archivo: str) -> list[str]:
      palabras = []
-     #prohibidas = [#, /, \, {,},(,)]
+     #prohibidas = [#, /, \, {,},(,), !, +, =, @,...]
 
      with open(archivo, "br") as file:
      #file = open(archivo, "b")
@@ -384,7 +384,7 @@ def listar_palabras(archivo: str) -> list[str]:
                          listar_palabras.append(palabra)
                     palabra = ""
 
-          #caso ultima palabra
+          #caso especial ultima palabra 
                     
           #habria que usar un archivo .mp3 posta
           #agarramos char a char(convertimos los bytes
