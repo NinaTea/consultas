@@ -399,6 +399,12 @@ promedios ej 7
 
 LU, materia, fecha, nota
 
-leer
+diccionario = {clave1: { clave1_a: 1, clave2_b: 2}, clave2: { clave2_a: 3, clave2_b: 4 }}
+
+para acceder a valores:
+
+     dict[clave1] esto devuelve  { clave1_a: 1, clave2_b: 2}
+
+     dict[clave1][clave1_a] esto devuelve 1
 
 """
