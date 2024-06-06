@@ -409,6 +409,23 @@ para acceder a valores:
      ejemplo["hola"] = 3 #clave de tipo str y valor de tipo int
      ejemplo[1] = 0 #clave de tipo int y valor de tipo int
 
+     dict= {1:0, 3:2}
+
+     dict[1] #aca tenemos la cantidad de palabras de longitud 1. O sea tenemos 0
+     contador = contador + dict[1]
+
+     #aumento la cantidad de palabras que tienen longitud 1
+
+     if la clave no esta:
+          dict[1] = 1
+     else:
+          dict[1] = dict[1] + 1
+
+     #armo un diccionario, con claves de 1 a 10
+     for i in range(1, 10 + 1):
+          dict[i] = 0
+          
+     dict = {1: 0, 2:0, ..., 10:0}
 """
 def calcular_promedio(c: Cola[int]):
      return c
