@@ -366,29 +366,39 @@ navegar_atras(historiales, "Usuario1")
 
 #vamos recorriendo el archivo, vamos armando palabras
 
-def listar_palabras(archivo: str) -> list[str]:
-     palabras = []
-     #prohibidas = [#, /, \, {,},(,), !, +, =, @,...]
+# def listar_palabras(archivo: str) -> list[str]:
+#      palabras = []
+#      #prohibidas = [#, /, \, {,},(,), !, +, =, @,...]
 
-     with open(archivo, "br") as file:
-     #file = open(archivo, "b")
-          palabra = ""
-          print("abri el archivo")
-          secuencia = file.read()
-          for byte in secuencia:
-               caracter = chr(byte)
-               if caracter not in prohibidas:
-                    palabra+= caracter
-               else:
-                    if len(palabra) >= 5:
-                         listar_palabras.append(palabra)
-                    palabra = ""
+#      with open(archivo, "br") as file:
+#      #file = open(archivo, "b")
+#           palabra = ""
+#           print("abri el archivo")
+#           secuencia = file.read()
+#           for byte in secuencia:
+#                caracter = chr(byte)
+#                if caracter not in prohibidas:
+#                     palabra+= caracter
+#                else:
+#                     if len(palabra) >= 5:
+#                          listar_palabras.append(palabra)
+#                     palabra = ""
 
-          #caso especial ultima palabra 
+#           #caso especial ultima palabra 
                     
-          #habria que usar un archivo .mp3 posta
-          #agarramos char a char(convertimos los bytes
-     return palabras
+#           #habria que usar un archivo .mp3 posta
+#           #agarramos char a char(convertimos los bytes
+#      return palabras
 
-listar_palabras(r'/home/cami/Desktop/consultas/archivo_prueba.mp3')
-prueba = open("prueba", "w")
+# listar_palabras(r'/home/cami/Desktop/consultas/archivo_prueba.mp3')
+# prueba = open("prueba", "w")
+
+
+""" 
+promedios ej 7
+
+LU, materia, fecha, nota
+
+leer
+
+"""
