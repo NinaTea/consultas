@@ -400,11 +400,23 @@ promedios ej 7
 LU, materia, fecha, nota
 
 diccionario = {clave1: { clave1_a: 1, clave2_b: 2}, clave2: { clave2_a: 3, clave2_b: 4 }}
+diccionario anidado {str, dict2}
 
 para acceder a valores:
 
      dict[clave1] esto devuelve  { clave1_a: 1, clave2_b: 2}
-     dict[clave1][clave1_a] esto devuelve 1
+     diccionario2 = dict[clave1]
+     diccionario2[clave1_a] esto devuelve 1
+
+     del, agregar, .items() 
+     for clave in diccionario:
+          valor = diccionario[clave]
+
+     for k,v in diccionario.items():
+          pass
+
+     ejemplo["hola"] = 3 #clave de tipo str y valor de tipo int
+     ejemplo[1] = 0 #clave de tipo int y valor de tipo int
 
 """
 def calcular_promedio(c: Cola[int]):
