@@ -424,7 +424,7 @@ para acceder a valores:
      #armo un diccionario, con claves de 1 a 10
      for i in range(1, 10 + 1):
           dict[i] = 0
-          
+
      dict = {1: 0, 2:0, ..., 10:0}
 """
 def calcular_promedio(c: Cola[int]):
@@ -502,3 +502,18 @@ Si te sirve, fijate en la pestaña materiales que hay código ejemplo que vimos 
 
 
 """
+#no hacer
+def a():
+     def b():
+          pass
+     pass
+
+import typing
+
+
+numero:int = 0
+
+archivo: typing.IO = open("archivo.txt", "r") #tipo archivo
+
+lineas:list[str] = archivo.readlines()
+
