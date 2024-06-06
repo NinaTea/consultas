@@ -407,7 +407,6 @@ para acceder a valores:
      dict[clave1][clave1_a] esto devuelve 1
 
 """
-
 def calcular_promedio(c: Cola[int]):
      return c
 
@@ -420,6 +419,68 @@ ejemplo2 = Cola()
 ejemplo2.put(34567891)
 ejemplo2.put(3)
 
+
 a = calcular_promedio(ejemplo2).queue #devuelve lo que sea
 print(calcular_promedio(ejemplo).queue, "miramos")
 print(a)
+
+apunto_a_cola1 = ejemplo
+yo_tambien = ejemplo
+
+print(apunto_a_cola1.queue)
+print(yo_tambien.queue)
+
+def ajdf(c: Cola[int]):
+     q = Cola()
+
+     q = c #q apunta a c
+
+     q.get() #aca agarro el primer elemento de c
+
+     return q  
+
+"""
+
+Buen día, estoy haciendo los ejercicios de la practica 8 y veo que al hacer una funcion con Colas y uso la funcion get, al intentar restaurar la cola porque es de tipo int, no se restaura y sigue quedando vacia, envio un ejemplo de como lo planteo:
+def crear_listac (c:Cola) -> list:
+    q=Cola()
+    lista:list=[]
+    while not(c.empty()):
+        x=c.get()
+        lista.append(x)
+        q.put(x)
+    c=q
+    return lista
+ 
+al intentar probar con una cola que sea c=[1,2,3,4,5], veo que luego de aplicar la funcion, c=[].
+que seria lo que esta mal aplicado? o que forma deberia utilizar?
+aguardo la respuesta,
+muchas gracias
+
+El problema es que cuando haces, en la última línea, "c = q" la variable local "c" cambia la refencia a la que apunta. Entonces si ves los elementos de c después de esa linea, vas a ver que tiene los elementos originales. Sin embargo, cuando salis de la función, la cola que habías pasado sigue vacía. Dejo comentarios por si ayuda:
+
+def crear_listac (c:Cola[int]) -> list[int]:
+    #acá la variable "c" es una referencia a "cola"
+    q:Cola[int]=Cola()
+    lista:list[int]=[]
+    while not(c.empty()):
+        x=c.get() #acá estas modificando "cola"
+        lista.append(x)
+        q.put(x)
+    #acá "cola" está vacía, y como "c" apunta a "cola", "c" es vacía tmb
+    c=q # Acá "c" ya no apunta a "cola", sino a "q". "cola" sigue vacía.
+    return lista
+
+cola: Cola[int] = Cola()
+cola.put(1)
+cola.put(5)
+# acá cola tiene los elementos 1 y 5
+crear_listac(cola)
+# acá cola está vacía
+
+ 
+Entonces lo que tenes que hacer es un 2do ciclo, en donde volver a agregar uno por uno los elementos de "q" a "c". Como "c" apunta a "cola", cuando salgas de la función cola va a seguir teniendo los valores que tenía originalmente.
+Si te sirve, fijate en la pestaña materiales que hay código ejemplo que vimos en uno de los laboratorios. Hay una función que usamos para imprimir los elementos de una cola, y luego volver a guardar los elementos que sacamos.
+
+
+"""
