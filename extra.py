@@ -265,15 +265,10 @@ def promedio(notas:list[float]) -> float:
 
 # print(calcular_promedio_estudiante('archivo_de_notas1.txt'))
 
-
-
 sitios= Pila()
 sitios.put("google")
 sitios.put("youtube")
 sitios.put("lanacion")
-
-
-
 
 inventario : dict = {}
 """inventario_aux : dict = {}
@@ -314,16 +309,12 @@ def calcular_valor_inventario(inventario : dict) -> float:
           valor_total += dicc["precio"] * dicc["cantidad"]
      return valor_total
 
-
 agregar_producto(inventario, "Camisa", 20.0, 50)
 agregar_producto(inventario, "Pantalon", 30.0, 30)
 actualizar_stock(inventario, "Camisa", 10)
 print(inventario)
 valor_total = calcular_valor_inventario(inventario)
 print("Valor total del inventario:", valor_total)
-
-
-
 
 def visitar_sitio(historiales: dict[str, Pila[str]],usuario: str,sitio: str) -> dict:
      if usuario in historiales:
@@ -444,9 +435,7 @@ print(yo_tambien.queue)
 
 def ajdf(c: Cola[int]):
      q = Cola()
-
      q = c #q apunta a c
-
      q.get() #aca agarro el primer elemento de c
 
      return q  
