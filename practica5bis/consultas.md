@@ -1,0 +1,1 @@
+No recibí consultas de esta guía.
